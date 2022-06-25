@@ -5,31 +5,21 @@
 
 <!-- badges: start -->
 
-<div style="display: flex;">
-
-<div>
-
 This package is a collection of color pallettes that were extracted from
 various books on my sons(Wren) bookshelf. Also included are a number of
-functions and wrappers to utilize them in baseR and ggplot2 plotting
+functions and wrappers to utilize them in base R and ggplot2 plotting
 functions, as well as to subset the packages to desired number/specific
 colors. It was heavily inspired by and modeled after the
-[MetBrewer](https://github.com/BlakeRMills/MetBrewer) and
-[wesanderson](https://github.com/karthik/wesanderson) packages, so if
-you are here you should check them out too! Logo created using
-[hexSticker](https://github.com/GuangchuangYu/hexSticker).
+[MetBrewer](https://github.com/BlakeRMills/MetBrewer),
+[PNWColors](https://github.com/jakelawlor/PNWColors), and
+[wesanderson](https://github.com/karthik/wesanderson) packages, and of
+course
+[RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf),
+so if you are here you should check them out too! Logo designed using
+[hexSticker](https://github.com/GuangchuangYu/hexSticker) and
+illustrator.
 
-</div>
-
-<div>
-
-<img src="images/WrenHex.png" width="200" />
-
-</div>
-
-</div>
-
-<!-- badges: end -->
+<img src="images/WrenHex2.png" width="200" /> <!-- badges: end -->
 
 ## Installation
 
@@ -103,8 +93,8 @@ ShowBookshelf(BestFor = "continuous")
 
 ### ShowBook()
 
-Similar to `ShowBookshellf()` which shows all palettes with given
-filters, but `ShowBook()` used to display a single book as a modified
+Similar to `ShowBookshelf()` which shows all palettes with given
+filters, but `ShowBook()` is used to display a single book as a modified
 plot object.
 
 ``` r
@@ -124,7 +114,7 @@ WB_brewer("BurtDow")
 ![](man/figures/README-WBbrewer-1.png)<!-- -->
 
 ``` r
-WB_brewer("CapsForSale", n = 5, direction = 1, override.order = FALSE, type="discrete")
+WB_brewer("Opposites", n = 5, direction = 1, override.order = FALSE, type="discrete")
 ```
 
 ![](man/figures/README-WBbrewer-2.png)<!-- -->
@@ -139,10 +129,15 @@ WB_brewer("GustavoTheShyGhostGraveyard", n = 20,type="continuous")
 WB_brewer("LittleBlueHouseBesideTheSeaCont",100,type="continuous")
 ```
 
-![](man/figures/README-WBbrewer-4.png)<!-- --> ### WB_subset_brewer()
+![](man/figures/README-WBbrewer-4.png)<!-- -->
 
-This function is just another way of customizing palettes that I found
-gives a little more intuitive control over the final product.
+### WB_subset_brewer()
+
+This function is just another way of customizing palettes that I tried
+building before finding out that `MetBrewer` had already figured things
+out better. So, this is a relic that still works, and gives a little
+more intuitive(to me at least…) or specific control over the final
+product.
 
 ``` r
 WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,4,5,6))
@@ -182,14 +177,11 @@ ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
 ![](man/figures/README-ggplotWrappers-2.png)<!-- -->
 
 ``` r
-df <- expand.grid(x = 1:25, y = 1:25)
-vec <- c(seq(1:312), seq(313:1))
-df <- cbind(df,vec)
 
-ggplot(df, aes(x = x,y = y,fill = vec))+
-  geom_tile()+
-  scale_fill_WB_c("WhatWellBuild")+
-  theme_void()
+ggplot(diamonds, aes(x = price, fill = color))+
+  geom_density(position="stack", color = "white")+
+  scale_fill_WB_d("CapsForSale")+
+  theme_classic()
 ```
 
 ![](man/figures/README-ggplotWrappers-3.png)<!-- -->
@@ -198,14 +190,39 @@ Can also simply utilize `WB_brewer()` within the normal ggplot2 scale
 functions.
 
 ``` r
-df <- expand.grid(x = 1:25, y = 1:25)
-vec <- c(seq(1:312), seq(313:1))
-df <- cbind(df,vec)
-
-ggplot(df, aes(x = x,y = y,fill = vec))+
-  geom_tile()+
-  scale_fill_gradientn(colors = WB_brewer("Vampenguin"))+
-  theme_void()
+library(usmap)
+library(magrittr)
+library(dplyr)
+statepop2 <- statepop %>% 
+  mutate(logPop = log(pop_2015, base = 10))
+plot_usmap(data = statepop2, 
+           values = "logPop",
+           regions = "states", 
+           color = "white") + 
+  labs(title = "State Populations",
+       subtitle = expression('Population by state for the year 2015 on a'~'log'[10]~'scale'),
+       fill = expression('log'[10]~'(Population)')) + 
+  scale_fill_gradientn(colors = WB_brewer("WhatWellBuild"))+
+  theme(panel.background=element_blank(),
+        legend.position = c(0.6,0.01),
+        legend.direction = "horizontal")
 ```
 
 ![](man/figures/README-ggplot-1.png)<!-- -->
+
+``` r
+ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
+  geom_hex()+
+  scale_fill_gradientn(colors = WB_brewer("TheHoneybeeDiverging"))+
+  theme_void()
+```
+
+![](man/figures/README-ggplot-2.png)<!-- -->
+
+## The Bookshelf
+
+![](images/BookShelf.png)
+
+## Contact
+
+Twitter: @benuveges
