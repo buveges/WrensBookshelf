@@ -8,8 +8,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  fig.path = "man/figures/README-"
 )
 ```
 
@@ -28,6 +27,7 @@ This package is a collection of color pallettes that were extracted from various
 ::: {}
 
 ![](images/WrenHex.png){width=40%}
+
 :::
 
 ::::

@@ -51,7 +51,7 @@ library(WrensBookshelf)
 ShowBookshelf()
 ```
 
-<img src="man/figures/README-AllPalettes-1.png" width="100%" />
+![](man/figures/README-AllPalettes-1.png)<!-- -->
 
 ``` r
 names(WrensBookshelf)
@@ -83,7 +83,7 @@ Can display only CVD safe palettes using `CVDsafe` option.
 ShowBookshelf(CVDsafe = TRUE)
 ```
 
-<img src="man/figures/README-CVDsafe-1.png" width="100%" />
+![](man/figures/README-CVDsafe-1.png)<!-- -->
 
 ### Palettes for Discrete/Continuous data
 
@@ -97,7 +97,7 @@ the `CVDsafe` option as well
 ShowBookshelf(BestFor = "continuous")
 ```
 
-<img src="man/figures/README-BestFor-1.png" width="100%" />
+![](man/figures/README-BestFor-1.png)<!-- -->
 
 ## Functions
 
@@ -111,7 +111,7 @@ plot object.
 ShowBook(name ="BabyWrenAndTheGreatGift")
 ```
 
-<img src="man/figures/README-ShowBook-1.png" width="100%" />
+![](man/figures/README-ShowBook-1.png)<!-- -->
 
 ### WB_brewer()
 
@@ -121,26 +121,25 @@ Select/create palettes from Wren’s bookshelf.
 WB_brewer("BurtDow")
 ```
 
-<img src="man/figures/README-WBbrewer-1.png" width="100%" />
+![](man/figures/README-WBbrewer-1.png)<!-- -->
 
 ``` r
 WB_brewer("CapsForSale", n = 5, direction = 1, override.order = FALSE, type="discrete")
 ```
 
-<img src="man/figures/README-WBbrewer-2.png" width="100%" />
+![](man/figures/README-WBbrewer-2.png)<!-- -->
 
 ``` r
 WB_brewer("GustavoTheShyGhostGraveyard", n = 20,type="continuous")
 ```
 
-<img src="man/figures/README-WBbrewer-3.png" width="100%" />
+![](man/figures/README-WBbrewer-3.png)<!-- -->
 
 ``` r
 WB_brewer("LittleBlueHouseBesideTheSeaCont",100,type="continuous")
 ```
 
-<img src="man/figures/README-WBbrewer-4.png" width="100%" /> ###
-WB_subset_brewer()
+![](man/figures/README-WBbrewer-4.png)<!-- --> ### WB_subset_brewer()
 
 This function is just another way of customizing palettes that I found
 gives a little more intuitive control over the final product.
@@ -149,13 +148,13 @@ gives a little more intuitive control over the final product.
 WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,4,5,6))
 ```
 
-<img src="man/figures/README-WBsubsetbrewer-1.png" width="100%" />
+![](man/figures/README-WBsubsetbrewer-1.png)<!-- -->
 
 ``` r
 WB_subset_brewer(name = "JulienIsAMermaid", n = 5, LCR = "left", type = "continuous", n2 = 200)
 ```
 
-<img src="man/figures/README-WBsubsetbrewer-2.png" width="100%" />
+![](man/figures/README-WBsubsetbrewer-2.png)<!-- -->
 
 ### ggplot wrapper functions
 
@@ -171,7 +170,7 @@ ggplot(mtcars, aes(x = disp, y = wt, color = factor(cyl)))+
   theme_bw()
 ```
 
-<img src="man/figures/README-ggplotWrappers-1.png" width="100%" />
+![](man/figures/README-ggplotWrappers-1.png)<!-- -->
 
 ``` r
 ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
@@ -180,7 +179,7 @@ ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
      theme_bw()
 ```
 
-<img src="man/figures/README-ggplotWrappers-2.png" width="100%" />
+![](man/figures/README-ggplotWrappers-2.png)<!-- -->
 
 ``` r
 df <- expand.grid(x = 1:25, y = 1:25)
@@ -193,7 +192,7 @@ ggplot(df, aes(x = x,y = y,fill = vec))+
   theme_void()
 ```
 
-<img src="man/figures/README-ggplotWrappers-3.png" width="100%" />
+![](man/figures/README-ggplotWrappers-3.png)<!-- -->
 
 Can also simply utilize `WB_brewer()` within the normal ggplot2 scale
 functions.
@@ -209,4 +208,4 @@ ggplot(df, aes(x = x,y = y,fill = vec))+
   theme_void()
 ```
 
-<img src="man/figures/README-ggplot-1.png" width="100%" />
+![](man/figures/README-ggplot-1.png)<!-- -->
