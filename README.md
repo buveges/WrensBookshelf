@@ -23,7 +23,7 @@ you are here you should check them out too! Logo created using
 
 <div>
 
-![](images/WrenHex.png)
+<img src="images/WrenHex.png" style="width:75.0%" />
 
 </div>
 
