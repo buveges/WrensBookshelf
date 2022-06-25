@@ -26,7 +26,7 @@ This package is a collection of color pallettes that were extracted from various
 
 ::: {}
 
-![](images/WrenHex.png){width=40%}
+![](images/WrenHex.png){width=200}
 
 :::
 
