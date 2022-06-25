@@ -21,13 +21,13 @@ knitr::opts_chunk$set(
 
 ::: {}
 
-This package is a collection of color pallettes that were extracted from various books on my sons(Wren) bookshelf. Also included are a number of functions and wrappers to utilize them in baseR and ggplot2 plotting functions, as well as to subset the packages to desired number/specific colors. It was heavily inspired by and modeled after the [MetBrewer](https://github.com/BlakeRMills/MetBrewer) and [wesanderson](https://github.com/karthik/wesanderson) packages.
+This package is a collection of color pallettes that were extracted from various books on my sons(Wren) bookshelf. Also included are a number of functions and wrappers to utilize them in baseR and ggplot2 plotting functions, as well as to subset the packages to desired number/specific colors. It was heavily inspired by and modeled after the [MetBrewer](https://github.com/BlakeRMills/MetBrewer) and [wesanderson](https://github.com/karthik/wesanderson) packages, so if you are here you should check them out too! Logo created using [hexSticker](https://github.com/GuangchuangYu/hexSticker).
 
 :::
 
 ::: {}
 
-![](/Users/benjaminuveges/Desktop/Rpalettes/WBS/WrenHex.png){}
+![](images/WrenHex.png){}
 :::
 
 ::::

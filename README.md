@@ -15,13 +15,15 @@ functions and wrappers to utilize them in baseR and ggplot2 plotting
 functions, as well as to subset the packages to desired number/specific
 colors. It was heavily inspired by and modeled after the
 [MetBrewer](https://github.com/BlakeRMills/MetBrewer) and
-[wesanderson](https://github.com/karthik/wesanderson) packages.
+[wesanderson](https://github.com/karthik/wesanderson) packages, so if
+you are here you should check them out too! Logo created using
+[hexSticker](https://github.com/GuangchuangYu/hexSticker).
 
 </div>
 
 <div>
 
-![](/Users/benjaminuveges/Desktop/Rpalettes/WBS/WrenHex.png)
+![](images/WrenHex.png)
 
 </div>
 
