@@ -12,8 +12,9 @@
 #' @export
 #'
 #' @examples
-#' WB_brewer(name = "Baby Wren And The Great Gift", type = "continuous", n = 200)
-#' WB_brewer(name = "Julien Is A Mermaid", type = "discrete", direction = -1, n = 7, override.order = TRUE)
+#' WB_brewer(name = "BabyWrenAndTheGreatGift", type = "continuous", n = 200)
+#' WB_brewer(name = "JulienIsAMermaid", type = "discrete",
+#'           direction = -1, n = 7, override.order = TRUE)
 WB_brewer <- function(name,n,type = c("discrete", "continuous"), direction = c(1,-1),override.order=FALSE){
   `%ni%` <- Negate(`%in%`)
   pal <- WrensBookshelf[[name]]
@@ -62,4 +63,22 @@ WB_brewer <- function(name,n,type = c("discrete", "continuous"), direction = c(1
   }
   out <- switch(type, continuous = continuous, discrete = discrete)
   structure(out, class = "palette", name = name)
+}
+
+# Function for printing palette
+
+#' @export
+#' @importFrom grDevices rgb
+#' @importFrom graphics rect par image text
+
+print.palette <- function(x, ...) {
+  n <- length(x)
+  old <- par(mar = c(0.5, 0.5, 0.5, 0.5))
+  on.exit(par(old))
+
+  image(1:n, 1, as.matrix(1:n), col = x,
+        ylab = "", xaxt = "n", yaxt = "n", bty = "n")
+
+  rect(0, 0.92, n + 1, 1.08, col = rgb(1, 1, 1, 0.8), border = NA)
+  text((n + 1) / 2, 1, labels = attr(x, "name"), cex = 1.5, family = "serif")
 }

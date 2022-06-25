@@ -3,17 +3,19 @@
 #' Wrapper function to allow easy integration with ggplot2. Sets discrete color scale
 #'
 #' @param name Name of palette from WrensBookshelf.
-#' @param direction Direction you want the palette to proceed; 1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.
-#' @param override.order Argument used to override the prescribed order that colors are selected from palettes for discrete palettes where n < length(palette). Default = FALSE.
+#' @param direction Direction you want the palette to proceed;
+#'     1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.
+#' @param override.order Argument used to override the prescribed order that colors
+#'     are selected from palettes for discrete palettes where n < length(palette). Default = FALSE.
 #' @param ... See discrete_scale() for additional params.
 #'
-#' @return
 #' @export
 #'
 #' @examples
-#' ggplot(mtcars, aes(x = disp,y = wt, color = factor(cyl)))+geom_point(size=3)+scale_color_WB_d(name = "You Matter")
+#' ggplot2::ggplot(mtcars, ggplot2::aes(x = disp,y = wt, color = factor(cyl)))+
+#' ggplot2::geom_point(size=3)+
+#' scale_color_WB_d(name = "YouMatter")
 scale_color_WB_d <- function(name, direction=1,override.order=FALSE, ...) {
-
   WB.discrete <- function(name, direction = c(1, -1),
                           override.order = FALSE) {
     `%ni%` <- Negate(`%in%`)
@@ -39,7 +41,6 @@ scale_color_WB_d <- function(name, direction=1,override.order=FALSE, ...) {
         rev(pal[[1]])[1:n]
       }
     }
-
   }
   ggplot2::discrete_scale(aesthetics = "color", scale_name = "WB_d",
                  palette = WB.discrete(name=name,direction = direction,

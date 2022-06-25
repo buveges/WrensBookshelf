@@ -9,18 +9,19 @@ scale_fill_WB_d(name, direction = 1, override.order = FALSE, ...)
 \arguments{
 \item{name}{Name of palette from WrensBookshelf.}
 
-\item{direction}{Direction you want the palette to proceed; 1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.}
+\item{direction}{Direction you want the palette to proceed;
+1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.}
 
-\item{override.order}{Argument used to override the prescribed order that colors are selected from palettes for discrete palettes where n < length(palette). Default = FALSE.}
+\item{override.order}{Argument used to override the prescribed order
+that colors are selected from palettes for discrete palettes where n < length(palette). Default = FALSE.}
 
 \item{...}{See discrete_scale() for additional params.}
-}
-\value{
-
 }
 \description{
 Wrapper function to allow easy integration with ggplot2. Sets discrete color scale.
 }
 \examples{
-ggplot(mtcars, aes(x = disp,y = wt, fill = factor(cyl)))+geom_point(size = 3, shape = 21)+scale_fill_WB_d(name = "You Matter")
+ggplot2::ggplot(mtcars, ggplot2::aes(x = disp,y = wt, fill = factor(cyl)))+
+ggplot2::geom_point(size = 3, shape = 21)+
+scale_fill_WB_d(name = "YouMatter")
 }

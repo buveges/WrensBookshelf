@@ -33,6 +33,7 @@ Color palette.
 Function used to create customized continuous/discrete palettes using the palettes in WrensBookshelf, offering more specific control over selected colors than WB_brewer.
 }
 \examples{
-WB_subset_brewer(name = "Julien Is A Mermaid", n = 5, LCR = "left", type = "continuous", n2 = 200)
-WB_subset_brewer(name = "Where The Wild Things Are", type = "discrete", LCR = c(1,4,5,6))
+WB_subset_brewer(name = "JulienIsAMermaid", n = 5,
+                 LCR = "left", type = "continuous", n2 = 200)
+WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,4,5,6))
 }

@@ -30,6 +30,7 @@ A color palette.
 Function used to create continuous/discrete palettes using the palettes in WrensBookshelf.
 }
 \examples{
-WB_brewer(name = "Baby Wren And The Great Gift", type = "continuous", n = 200)
-WB_brewer(name = "Julien Is A Mermaid", type = "discrete", direction = -1, n = 7, override.order = TRUE)
+WB_brewer(name = "BabyWrenAndTheGreatGift", type = "continuous", n = 200)
+WB_brewer(name = "JulienIsAMermaid", type = "discrete",
+          direction = -1, n = 7, override.order = TRUE)
 }

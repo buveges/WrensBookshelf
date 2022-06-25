@@ -11,10 +11,12 @@
 #'
 #' @return Color palette.
 #' @export
+#' @importFrom graphics barplot par title
 #'
 #' @examples
-#' WB_subset_brewer(name = "Julien Is A Mermaid", n = 5, LCR = "left", type = "continuous", n2 = 200)
-#' WB_subset_brewer(name = "Where The Wild Things Are", type = "discrete", LCR = c(1,4,5,6))
+#' WB_subset_brewer(name = "JulienIsAMermaid", n = 5,
+#'                  LCR = "left", type = "continuous", n2 = 200)
+#' WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,4,5,6))
 WB_subset_brewer <- function(name, n=NA, LCR, type = c("continuous","discrete"),
          direction = c(1,-1), n2=NULL) {
   `%ni%` <- Negate(`%in%`)
@@ -95,4 +97,22 @@ WB_subset_brewer <- function(name, n=NA, LCR, type = c("continuous","discrete"),
   out <- switch(type, continuous = continuous, discrete = discrete)
   structure(out, class = "palette", name = name)
 
+}
+
+# Function for printing palette
+
+#' @export
+#' @importFrom grDevices rgb
+#' @importFrom graphics rect par image text
+
+print.palette <- function(x, ...) {
+  n <- length(x)
+  old <- par(mar = c(0.5, 0.5, 0.5, 0.5))
+  on.exit(par(old))
+
+  image(1:n, 1, as.matrix(1:n), col = x,
+        ylab = "", xaxt = "n", yaxt = "n", bty = "n")
+
+  rect(0, 0.92, n + 1, 1.08, col = rgb(1, 1, 1, 0.8), border = NA)
+  text((n + 1) / 2, 1, labels = attr(x, "name"), cex = 1.5, family = "serif")
 }

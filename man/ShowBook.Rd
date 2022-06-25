@@ -16,5 +16,5 @@ Graphic object.
 Generates a graphic object using a specified palette from WrensBookshelf.
 }
 \examples{
-ShowBook(name ="Baby Wren And The Great Gift")
+ShowBook(name ="BabyWrenAndTheGreatGift")
 }

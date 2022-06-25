@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' ShowBook(name ="Baby Wren And The Great Gift")
+#' ShowBook(name ="BabyWrenAndTheGreatGift")
 ShowBook <- function(name) {
   WrensBookshelfTemp <-  WrensBookshelf
   pal <- WrensBookshelfTemp[[name]]

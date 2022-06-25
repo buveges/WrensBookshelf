@@ -3,14 +3,16 @@
 #' Wrapper function to allow easy integration with ggplot2. Sets continuous fill scale.
 #'
 #' @param name Name of palette from WrensBookshelf.
-#' @param direction Direction you want the palette to proceed; 1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.
+#' @param direction Direction you want the palette to proceed;
+#'     1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.
 #' @param ... See scale_color_gradientn() for additional params.
 #'
-#' @return
 #' @export
 #'
 #' @examples
-#' ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+geom_point(size=3, shape = 21)+scale_color_WB_c(name = "What We'll Build")
+#' ggplot2::ggplot(mtcars, ggplot2::aes(x = disp,y = wt, fill= mpg))+
+#' ggplot2::geom_point(size=3, shape = 21)+
+#' scale_fill_WB_c(name = "WhatWellBuild")
 scale_fill_WB_c <- function(name, direction=1, ...) {
   `%ni%` <- Negate(`%in%`)
   if (direction %ni% c(1,-1)){
