@@ -9,16 +9,16 @@ scale_color_WB_c(name, direction = 1, ...)
 \arguments{
 \item{name}{Name of palette from WrensBookshelf.}
 
-\item{direction}{Direction you want the palette to proceed; 1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.}
+\item{direction}{Direction you want the palette to proceed;
+1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.}
 
 \item{...}{See scale_color_gradientn() for additional params.}
-}
-\value{
-
 }
 \description{
 Wrapper function to allow easy integration with ggplot2. Sets continuous color scale.
 }
 \examples{
-ggplot(mtcars, aes(x=disp,y=wt, color = mpg))+geom_point(size=3)+scale_color_WB_c(name = "What We'll Build")
+ggplot2::ggplot(mtcars, ggplot2::aes(x=disp,y=wt, color = mpg))+
+ggplot2::geom_point(size=3)+
+scale_color_WB_c(name = "WhatWellBuild")
 }
