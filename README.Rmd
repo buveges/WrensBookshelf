@@ -152,8 +152,8 @@ plot_usmap(data = statepop2,
         legend.direction = "horizontal")
 
 ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
-  geom_hex()+
-  scale_fill_gradientn(colors = WB_brewer("TheHoneybeeDiverging"))+
+  stat_density_2d(aes(fill = ..level..), geom = "polygon", colour="white")+
+  scale_fill_WB_c("TinyPerfectThings",direction = -1)+
   theme_void()
 
 ```
