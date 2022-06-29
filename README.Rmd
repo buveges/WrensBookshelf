@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 This package is a collection of color pallettes that were extracted from various books on my sons(Wren) bookshelf. Also included are a number of functions and wrappers to utilize them in base R and ggplot2 plotting functions, as well as to subset the packages to desired number/specific colors. It was heavily inspired by and modeled after the [MetBrewer](https://github.com/BlakeRMills/MetBrewer), [PNWColors](https://github.com/jakelawlor/PNWColors), and [wesanderson](https://github.com/karthik/wesanderson) packages, and of course [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf), so if you are here you should check them out too! Logo designed using [hexSticker](https://github.com/GuangchuangYu/hexSticker) and illustrator.
 
 
-![](images/WrenHex2.png){width=200}
+![](man/images/WrenHex2.png){width=200}
 <!-- badges: end -->
 
 
@@ -160,7 +160,7 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
 
 ## The Bookshelf
 
-![](images/BookShelf.png)
+![](man/images/BookShelf.png)
 
 ## Contact
 

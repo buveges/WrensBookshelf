@@ -19,7 +19,7 @@ so if you are here you should check them out too! Logo designed using
 [hexSticker](https://github.com/GuangchuangYu/hexSticker) and
 illustrator.
 
-<img src="images/WrenHex2.png" width="200" /> <!-- badges: end -->
+<img src="man/images/WrenHex2.png" width="200" /> <!-- badges: end -->
 
 ## Installation
 
@@ -221,7 +221,7 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
 
 ## The Bookshelf
 
-![](images/BookShelf.png)
+![](man/images/BookShelf.png)
 
 ## Contact
 
