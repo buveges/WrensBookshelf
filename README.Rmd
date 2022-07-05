@@ -78,7 +78,7 @@ ShowBook(name ="BabyWrenAndTheGreatGift")
 
 ### WB_brewer()
 
-Select/create palettes from Wren's bookshelf.
+Select/create palettes from Wren's bookshelf. For discrete palettes, I have assigned a specific order that the colors will be selected from a given palette in order to give the best contrast between discrete variables. This can be removed using `override.order = TRUE`. 
 
 ```{r WBbrewer}
 
@@ -86,9 +86,9 @@ WB_brewer("BurtDow")
 
 WB_brewer("Opposites", n = 5, direction = 1, override.order = FALSE, type="discrete")
 
-WB_brewer("GustavoTheShyGhostGraveyard", n = 20,type="continuous")
+WB_brewer("GustavoTheShyGhost1", n = 20,type="continuous")
 
-WB_brewer("LittleBlueHouseBesideTheSeaCont",100,type="continuous")
+WB_brewer("LittleBlueHouseBesideTheSea1",100,type="continuous")
 
 ```
 

@@ -45,24 +45,26 @@ ShowBookshelf()
 
 ``` r
 names(WrensBookshelf)
-#>  [1] "BabyBeluga"                      "BabyWrenAndTheGreatGift"        
-#>  [3] "BlueberriesForSal"               "BoTheBrave"                     
-#>  [5] "BoTheBraveCVDS"                  "BurtDow"                        
-#>  [7] "BurtDowCVDS"                     "CapsForSale"                    
-#>  [9] "GustavoTheShyGhostCover"         "GustavoTheShyGhostGraveyard"    
-#> [11] "HaroldAndThePurpleCrayon"        "JeffGoesWild"                   
-#> [13] "JulienIsAMermaid"                "LittleBlueHouseBesideTheSeaCont"
-#> [15] "LittleBlueHouseBesideTheSeaDisc" "Madelline"                      
-#> [17] "MakeWayForDucklings"             "MoreThanALittle"                
-#> [19] "OhThePlacesYoullGo"              "Opposites"                      
-#> [21] "StackTheCats"                    "TheDucklingGetsACookie"         
-#> [23] "TheHoneybee"                     "TheHoneybeeDiverging"           
-#> [25] "ThePoutPoutFish"                 "TheSnowyDay"                    
-#> [27] "TheStoryOfBabar"                 "TheseWordsIShapedForYou"        
-#> [29] "ThisMooseBelongsToMe"            "ThreeLittleVikings"             
-#> [31] "TigerDays"                       "TinyPerfectThings"              
-#> [33] "Vampenguin"                      "WhatWellBuild"                  
-#> [35] "WhereTheWildThingsAre"           "YouMatter"
+#>  [1] "BabyBeluga"                   "BabyWrenAndTheGreatGift"     
+#>  [3] "BatheTheCat"                  "BlueberriesForSal"           
+#>  [5] "BoTheBrave"                   "BoTheBraveCVDS"              
+#>  [7] "BurtDow"                      "BurtDowCVDS"                 
+#>  [9] "CapsForSale"                  "GustavoTheShyGhost1"         
+#> [11] "GustavoTheShyGhost2"          "HaroldAndThePurpleCrayon"    
+#> [13] "JeffGoesWild"                 "JulienIsAMermaid"            
+#> [15] "LastStopOnMarketStreet"       "LittleBlueHouseBesideTheSea1"
+#> [17] "LittleBlueHouseBesideTheSea2" "Madelline"                   
+#> [19] "MakeWayForDucklings"          "Moongame"                    
+#> [21] "MoreThanALittle"              "OhThePlacesYoullGo"          
+#> [23] "Opposites"                    "StackTheCats"                
+#> [25] "TheDucklingGetsACookie"       "TheHoneybee1"                
+#> [27] "TheHoneybee2"                 "ThePoutPoutFish"             
+#> [29] "TheRunawayBunny"              "TheSnowyDay"                 
+#> [31] "TheStoryOfBabar"              "TheseWordsIShapedForYou"     
+#> [33] "ThisMooseBelongsToMe"         "ThreeLittleVikings"          
+#> [35] "TigerDays"                    "TinyPerfectThings"           
+#> [37] "Vampenguin"                   "WhatWellBuild"               
+#> [39] "WhereTheWildThingsAre"        "YouMatter"
 ```
 
 ### Color Vision Deficiency (CVD) safe palettes
@@ -105,7 +107,10 @@ ShowBook(name ="BabyWrenAndTheGreatGift")
 
 ### WB_brewer()
 
-Select/create palettes from Wren’s bookshelf.
+Select/create palettes from Wren’s bookshelf. For discrete palettes, I
+have assigned a specific order that the colors will be selected from a
+given palette in order to give the best contrast between discrete
+variables. This can be removed using `override.order = TRUE`.
 
 ``` r
 WB_brewer("BurtDow")
@@ -120,13 +125,13 @@ WB_brewer("Opposites", n = 5, direction = 1, override.order = FALSE, type="discr
 ![](man/figures/README-WBbrewer-2.png)<!-- -->
 
 ``` r
-WB_brewer("GustavoTheShyGhostGraveyard", n = 20,type="continuous")
+WB_brewer("GustavoTheShyGhost1", n = 20,type="continuous")
 ```
 
 ![](man/figures/README-WBbrewer-3.png)<!-- -->
 
 ``` r
-WB_brewer("LittleBlueHouseBesideTheSeaCont",100,type="continuous")
+WB_brewer("LittleBlueHouseBesideTheSea1",100,type="continuous")
 ```
 
 ![](man/figures/README-WBbrewer-4.png)<!-- -->

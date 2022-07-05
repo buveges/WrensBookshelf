@@ -29,10 +29,10 @@ scale_fill_WB_d <- function(name, direction=1,override.order=FALSE,...) {
     }
     function(n) {
       if (direction == 1 & override.order == FALSE) {
-        pal[[1]][which(pal[[2]] %in% c(1:n) == TRUE)]
+        pal[[1]][pal[[2]][1:n]]
       }
       else if (direction == -1 & override.order == FALSE) {
-        rev(pal[[1]][which(pal[[2]] %in% c(1:n) == TRUE)])
+        rev(pal[[1]][pal[[2]][1:n]])
       }
       else if (direction == 1 & override.order == TRUE) {
         pal[[1]][1:n]
