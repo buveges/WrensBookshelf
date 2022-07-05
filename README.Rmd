@@ -86,7 +86,7 @@ WB_brewer("BurtDow")
 
 WB_brewer("Opposites", n = 5, direction = 1, override.order = FALSE, type="discrete")
 
-WB_brewer("GustavoTheShyGhost1", n = 20,type="continuous")
+WB_brewer("GustavoTheShyGhost2", n = 20,type="continuous")
 
 WB_brewer("LittleBlueHouseBesideTheSea1",100,type="continuous")
 
@@ -125,7 +125,7 @@ ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
 
 ggplot(diamonds, aes(x = price, fill = color))+
   geom_density(position="stack", color = "white")+
-  scale_fill_WB_d("CapsForSale")+
+  scale_fill_WB_d("CapsForSale", override.order = TRUE)+
   theme_classic()
 
 ```

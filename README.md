@@ -125,7 +125,7 @@ WB_brewer("Opposites", n = 5, direction = 1, override.order = FALSE, type="discr
 ![](man/figures/README-WBbrewer-2.png)<!-- -->
 
 ``` r
-WB_brewer("GustavoTheShyGhost1", n = 20,type="continuous")
+WB_brewer("GustavoTheShyGhost2", n = 20,type="continuous")
 ```
 
 ![](man/figures/README-WBbrewer-3.png)<!-- -->
@@ -185,7 +185,7 @@ ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
 
 ggplot(diamonds, aes(x = price, fill = color))+
   geom_density(position="stack", color = "white")+
-  scale_fill_WB_d("CapsForSale")+
+  scale_fill_WB_d("CapsForSale", override.order = TRUE)+
   theme_classic()
 ```
 
