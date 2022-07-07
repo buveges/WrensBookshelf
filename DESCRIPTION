@@ -1,6 +1,6 @@
 Package: WrensBookshelf
 Title: A collection of palettes from Wren's Bookshelf, and some functions to use them
-Version: 0.0.0.9000
+Version: 0.1.0
 Imports:
     ggplot2
 Authors@R: 
