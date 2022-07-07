@@ -5,7 +5,7 @@
 \alias{WrensBookshelf}
 \title{Complete list of palettes.}
 \format{
-An object of class \code{list} of length 36.
+An object of class \code{list} of length 40.
 }
 \usage{
 WrensBookshelf

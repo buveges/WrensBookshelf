@@ -69,7 +69,11 @@ names(WrensBookshelf)
 
 ### Color Vision Deficiency (CVD) safe palettes
 
-Can display only CVD safe palettes using `CVDsafe` option.
+Can display only CVD safe palettes using `CVDsafe` option. These were
+determined/assigned by using the amazing `cvdPlot()` function from the
+[colorBlindness](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
+package, and should be safe for deuteranopia and protanopia, and in many
+cases when desaturated (BW).
 
 ``` r
 ShowBookshelf(CVDsafe = TRUE)
@@ -107,54 +111,74 @@ ShowBook(name ="BabyWrenAndTheGreatGift")
 
 ### WB_brewer()
 
-Select/create palettes from Wren’s bookshelf. For discrete palettes, I
-have assigned a specific order that the colors will be selected from a
-given palette in order to give the best contrast between discrete
-variables. This can be removed using `override.order = TRUE`.
+Select/create palettes from Wren’s bookshelf. Can create “discrete” or
+“continuous” color palettes using the `type` argument.
 
 ``` r
 WB_brewer("BurtDow")
 ```
 
-![](man/figures/README-WBbrewer-1.png)<!-- -->
+<img src="man/figures/README-WBbrewer-1.png" height="300px" />
 
 ``` r
-WB_brewer("Opposites", n = 5, direction = 1, override.order = FALSE, type="discrete")
+WB_brewer("Opposites", n = 5, type="discrete")
 ```
 
-![](man/figures/README-WBbrewer-2.png)<!-- -->
+<img src="man/figures/README-WBbrewer-2.png" height="300px" />
 
 ``` r
-WB_brewer("GustavoTheShyGhost2", n = 20,type="continuous")
+WB_brewer("GustavoTheShyGhost2", n = 20, type="continuous")
 ```
 
-![](man/figures/README-WBbrewer-3.png)<!-- -->
+<img src="man/figures/README-WBbrewer-3.png" height="300px" />
 
 ``` r
-WB_brewer("LittleBlueHouseBesideTheSea1",100,type="continuous")
+WB_brewer("LittleBlueHouseBesideTheSea1", n = 100, type="continuous")
 ```
 
-![](man/figures/README-WBbrewer-4.png)<!-- -->
+<img src="man/figures/README-WBbrewer-4.png" height="300px" />
+
+For discrete palettes, I have assigned a specific order that the colors
+will be selected from a given palette when `n < length(palette)` in
+order to give the best contrast between discrete variables (in my
+opinion). This can be removed using `override.order= TRUE`.
+
+``` r
+WB_brewer("TheRunawayBunny", n = 4, type = "discrete", override.order = FALSE)
+```
+
+<img src="man/figures/README-OverrideOrder-1.png" height="300px" />
+
+``` r
+WB_brewer("TheRunawayBunny", n = 6, type = "discrete", direction = -1, override.order = TRUE)
+```
+
+<img src="man/figures/README-OverrideOrder-2.png" height="300px" />
 
 ### WB_subset_brewer()
 
 This function is just another way of customizing palettes that I tried
-building before finding out that `MetBrewer` had already figured things
-out better. So, this is a relic that still works, and gives a little
-more intuitive(to me at least…) or specific control over the final
-product.
-
-``` r
-WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,4,5,6))
-```
-
-![](man/figures/README-WBsubsetbrewer-1.png)<!-- -->
+building before figuring out a better way to do it. So, this is a relic
+that still works, and still gives a little more intuitive(to me at
+least…) or specific control over the final product.
 
 ``` r
 WB_subset_brewer(name = "JulienIsAMermaid", n = 5, LCR = "left", type = "continuous", n2 = 200)
 ```
 
-![](man/figures/README-WBsubsetbrewer-2.png)<!-- -->
+<img src="man/figures/README-WBsubsetbrewer-1.png" height="300px" />
+
+It also allows for you to select the exact subset of colors you want
+from a palette by providing a vector of the colors positions (Left to
+Right) as shown by `ShowBookshelf()` or `ShowBook()` to the `LCR`
+argument. The vector you provide can also shuffle around the order of
+the colors to best suit your preferences.
+
+``` r
+WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,6,4,5))
+```
+
+<img src="man/figures/README-WBsubsetbrewerVector-1.png" height="300px" />
 
 ### ggplot wrapper functions
 
@@ -175,7 +199,7 @@ ggplot(mtcars, aes(x = disp, y = wt, color = factor(cyl)))+
 ``` r
 ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
      geom_point(size=5, shape = 21)+
-     scale_fill_WB_c(name = "BabyBeluga", direction = -1)+
+     scale_fill_WB_c(name = "ThisMooseBelongsToMe", direction = -1)+
      theme_bw()
 ```
 
