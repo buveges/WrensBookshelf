@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-This package is a collection of color pallettes that were extracted from various books on my sons(Wren) bookshelf. Also included are a number of functions and wrappers to utilize them in base R and ggplot2 plotting functions, as well as to subset the packages to desired number/specific colors. It was heavily inspired by and modeled after the [MetBrewer](https://github.com/BlakeRMills/MetBrewer), [PNWColors](https://github.com/jakelawlor/PNWColors), and [wesanderson](https://github.com/karthik/wesanderson) packages, and of course [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf), so if you are here you should check them out too! Logo designed using [hexSticker](https://github.com/GuangchuangYu/hexSticker) and illustrator.
+This package is a collection of color pallettes that were extracted from various books on my sons(Wren) bookshelf. Also included are a number of functions and wrappers to utilize them in base R and ggplot2 plotting functions, as well as to subset the packages to desired number/specific colors. It was heavily inspired by and modeled after the [MetBrewer](https://github.com/BlakeRMills/MetBrewer), [PNWColors](https://github.com/jakelawlor/PNWColors), and [wesanderson](https://github.com/karthik/wesanderson) packages, and of course [RColorBrewer](https://CRAN.R-project.org/package=RColorBrewer ), so if you are here you should check them out too! Logo designed using [hexSticker](https://github.com/GuangchuangYu/hexSticker) and illustrator.
 
 
 ![](man/images/WrenHex2.png){width=200}
@@ -49,7 +49,7 @@ names(WrensBookshelf)
 
 ### Color Vision Deficiency (CVD) safe palettes
 
-Can display only CVD safe palettes using `CVDsafe` option. These were determined/assigned by using the amazing `cvdPlot()` function from the [colorBlindness](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html) package, and should be safe for deuteranopia and protanopia, and in many cases when desaturated (BW).
+Can display only CVD safe palettes using `CVDsafe` option. These were determined/assigned by using the amazing `cvdPlot()` function from the [colorBlindness](https://CRAN.R-project.org/package=colorBlindness) package, and should be safe for deuteranopia and protanopia, and in many cases when desaturated (BW).
 
 ```{r CVDsafe}
 ShowBookshelf(CVDsafe = TRUE)

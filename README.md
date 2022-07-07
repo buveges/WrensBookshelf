@@ -13,8 +13,7 @@ colors. It was heavily inspired by and modeled after the
 [MetBrewer](https://github.com/BlakeRMills/MetBrewer),
 [PNWColors](https://github.com/jakelawlor/PNWColors), and
 [wesanderson](https://github.com/karthik/wesanderson) packages, and of
-course
-[RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf),
+course [RColorBrewer](https://CRAN.R-project.org/package=RColorBrewer),
 so if you are here you should check them out too! Logo designed using
 [hexSticker](https://github.com/GuangchuangYu/hexSticker) and
 illustrator.
@@ -71,7 +70,7 @@ names(WrensBookshelf)
 
 Can display only CVD safe palettes using `CVDsafe` option. These were
 determined/assigned by using the amazing `cvdPlot()` function from the
-[colorBlindness](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
+[colorBlindness](https://CRAN.R-project.org/package=colorBlindness)
 package, and should be safe for deuteranopia and protanopia, and in many
 cases when desaturated (BW).
 

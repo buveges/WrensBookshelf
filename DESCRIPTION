@@ -8,8 +8,8 @@ Authors@R:
            comment = c(ORCID = "0000-0002-8981-8970"))
 Description: A collection of color palettes that were extracted 
     from various books on my sons(Wren) bookshelf. Also included are a number of 
-    functions and wrappers to utilize them in baseR and ggplot2 plotting functions, 
-    as well as to subset the packages to desired number/specific colors.
+    functions and wrappers to utilize them, as well as to subset the packages to 
+    desired number/specific colors.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
