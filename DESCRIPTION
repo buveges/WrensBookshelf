@@ -1,12 +1,12 @@
 Package: WrensBookshelf
-Title: A collection of palettes from Wren's Bookshelf, and some functions to use them
+Title: A Collection of Palettes from Wren's Bookshelf, and some Functions to Use Them
 Version: 0.1.0
 Imports:
     ggplot2
 Authors@R: 
     person("Benjamin", "Uveges", , "uvegesbti@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-8981-8970"))
-Description: This package is a collection of color pallettes that were extracted 
+Description: A collection of color palettes that were extracted 
     from various books on my sons(Wren) bookshelf. Also included are a number of 
     functions and wrappers to utilize them in baseR and ggplot2 plotting functions, 
     as well as to subset the packages to desired number/specific colors.
