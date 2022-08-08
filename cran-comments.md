@@ -1,6 +1,9 @@
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs in local check.
 
+## Second Resubmission
+* Fixed NEWS.md file, now should be in the correct format.
+
 ## Resubmission
 This is a resubmission after the initial submission did "not pass the incoming checks automatically". In this version I have:
 
