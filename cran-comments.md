@@ -1,6 +1,9 @@
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs in local check.
 
+## Fixes
+* Added image files used for Github README.md to .Rbuildignore, file size shoould now be below 5MB
+
 ## Second Resubmission
 * Fixed NEWS.md file, now should be in the correct format.
 
