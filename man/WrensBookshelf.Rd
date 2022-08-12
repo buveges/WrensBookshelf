@@ -10,6 +10,9 @@ An object of class \code{list} of length 40.
 \usage{
 WrensBookshelf
 }
+\value{
+No return value, sets a list of palettes to be used with WrensBookshelf functions
+}
 \description{
 Use names(WrensBookshelf) to display all possible palette names. Current available palettes:
 \code{BabyBeluga}, \code{BabyWrenAndTheGreatGift}, \code{BlueberriesForSal}, \code{BoTheBrave},

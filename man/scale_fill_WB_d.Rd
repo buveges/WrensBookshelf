@@ -17,6 +17,9 @@ that colors are selected from palettes for discrete palettes where n < length(pa
 
 \item{...}{See discrete_scale() for additional params.}
 }
+\value{
+No return value, integrates WB_brewer into ggplot2 function.
+}
 \description{
 Wrapper function to allow easy integration with ggplot2. Sets discrete color scale.
 }

@@ -14,6 +14,7 @@
 #' \code{TheseWordsIShapedForYou}, \code{ThisMooseBelongsToMe}, \code{ThreeLittleVikings}, \code{TigerDays},
 #' \code{TinyPerfectThings}, \code{Vampenguin}, \code{WhatWellBuild}, \code{WhereTheWildThingsAre}, and \code{YouMatter}.
 #'
+#' @return No return value, sets a list of palettes to be used with WrensBookshelf functions
 #' @export
 WrensBookshelf <- list(
   TigerDays = list(c("#3d85a3","#e6c74a","#6a2124","#614e46","#bf4b34","#bf798d","#bbbdc2","#5b6e97","#5b7d30","#9c84b3"),

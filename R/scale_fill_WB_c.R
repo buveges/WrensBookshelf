@@ -7,6 +7,7 @@
 #'     1 = direction shown in ShowBookshelf() or ShowBook(), -1 = reversed.
 #' @param ... See scale_color_gradientn() for additional params.
 #'
+#' @return No return value, integrates WB_brewer into ggplot2 function.
 #' @export
 #'
 #' @examples

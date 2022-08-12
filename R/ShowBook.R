@@ -1,4 +1,4 @@
-#' View a book pallette
+#' View a book palette
 #'
 #' Generates a graphic object using a specified palette from WrensBookshelf.
 #'

@@ -14,6 +14,9 @@ scale_color_WB_c(name, direction = 1, ...)
 
 \item{...}{See scale_color_gradientn() for additional params.}
 }
+\value{
+No return value, integrates WB_brewer into ggplot2 function.
+}
 \description{
 Wrapper function to allow easy integration with ggplot2. Sets continuous color scale.
 }

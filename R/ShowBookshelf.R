@@ -12,7 +12,8 @@
 #' ShowBookshelf()
 #' ShowBookshelf(CVDsafe = TRUE, BestFor = "continuous")
 ShowBookshelf <- function(CVDsafe = FALSE, BestFor = NA) {
-  o_par <- par()
+  oldpar <- par(no.readonly = TRUE)
+  on.exit(par(oldpar))
   WrensBookshelfTemp <-  WrensBookshelf
   if (CVDsafe == TRUE) {
     for (i in names(WrensBookshelfTemp )){
@@ -50,5 +51,4 @@ ShowBookshelf <- function(CVDsafe = FALSE, BestFor = NA) {
   par(mfrow = c(ceiling(length(WrensBookshelfTemp)/4),4),
       mai = c(0.2,0.2,0.2,0.2))
   invisible(mapply(FUN = WB.bar, names(WrensBookshelfTemp)))
-  on.exit(par(mfrow=o_par$mfrow))
 }

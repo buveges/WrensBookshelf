@@ -9,6 +9,7 @@
 #'     are selected from palettes for discrete palettes where n < length(palette). Default = FALSE.
 #' @param ... See discrete_scale() for additional params.
 #'
+#' @return No return value, integrates WB_brewer into ggplot2 function.
 #' @export
 #'
 #' @examples
