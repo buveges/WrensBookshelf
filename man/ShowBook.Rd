@@ -2,7 +2,7 @@
 % Please edit documentation in R/ShowBook.R
 \name{ShowBook}
 \alias{ShowBook}
-\title{View a book pallette}
+\title{View a book palette}
 \usage{
 ShowBook(name)
 }
