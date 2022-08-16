@@ -18,6 +18,10 @@ knitr::opts_chunk$set(
 # WrensBookshelf
 
 <!-- badges: start -->
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+[![](http://cranlogs.r-pkg.org/badges/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+[![](http://cranlogs.r-pkg.org/badges/last-week/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
 
 This package is a collection of color pallettes that were extracted from various books on my sons(Wren) bookshelf. Also included are a number of functions and wrappers to utilize them in base R and ggplot2 plotting functions, as well as to subset the packages to desired number/specific colors. It was heavily inspired by and modeled after the [MetBrewer](https://github.com/BlakeRMills/MetBrewer), [PNWColors](https://github.com/jakelawlor/PNWColors), and [wesanderson](https://github.com/karthik/wesanderson) packages, and of course [RColorBrewer](https://CRAN.R-project.org/package=RColorBrewer ), so if you are here you should check them out too! Logo designed using [hexSticker](https://github.com/GuangchuangYu/hexSticker) and illustrator.
 
@@ -28,7 +32,12 @@ This package is a collection of color pallettes that were extracted from various
 
 ## Installation
 
-You can install the released version of WrensBookshelf from 
+You can install the released version of WrensBookshelf from CRAN using:
+
+```r
+install.packages("WrensBookshelf")
+```
+And the developement version from Github using:
 
 ``` r
 devtools::install_github("buveges/WrensBookshelf")

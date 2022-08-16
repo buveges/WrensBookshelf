@@ -5,6 +5,11 @@
 
 <!-- badges: start -->
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+[![](http://cranlogs.r-pkg.org/badges/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+[![](http://cranlogs.r-pkg.org/badges/last-week/WrensBookshelf?color=green)](https://cran.r-project.org/package=WrensBookshelf)
+
 This package is a collection of color pallettes that were extracted from
 various books on my sons(Wren) bookshelf. Also included are a number of
 functions and wrappers to utilize them in base R and ggplot2 plotting
@@ -22,7 +27,13 @@ illustrator.
 
 ## Installation
 
-You can install the released version of WrensBookshelf from
+You can install the released version of WrensBookshelf from CRAN using:
+
+``` r
+install.packages("WrensBookshelf")
+```
+
+And the developement version from Github using:
 
 ``` r
 devtools::install_github("buveges/WrensBookshelf")
@@ -43,6 +54,7 @@ ShowBookshelf()
 ![](man/figures/README-AllPalettes-1.png)<!-- -->
 
 ``` r
+
 names(WrensBookshelf)
 #>  [1] "BabyBeluga"                   "BabyWrenAndTheGreatGift"     
 #>  [3] "BatheTheCat"                  "BlueberriesForSal"           
@@ -114,24 +126,28 @@ Select/create palettes from Wren’s bookshelf. Can create “discrete” or
 “continuous” color palettes using the `type` argument.
 
 ``` r
+
 WB_brewer("BurtDow")
 ```
 
 <img src="man/figures/README-WBbrewer-1.png" height="300px" />
 
 ``` r
+
 WB_brewer("Opposites", n = 5, type="discrete")
 ```
 
 <img src="man/figures/README-WBbrewer-2.png" height="300px" />
 
 ``` r
+
 WB_brewer("GustavoTheShyGhost2", n = 20, type="continuous")
 ```
 
 <img src="man/figures/README-WBbrewer-3.png" height="300px" />
 
 ``` r
+
 WB_brewer("LittleBlueHouseBesideTheSea1", n = 100, type="continuous")
 ```
 
@@ -143,12 +159,14 @@ order to give the best contrast between discrete variables (in my
 opinion). This can be removed using `override.order= TRUE`.
 
 ``` r
+
 WB_brewer("TheRunawayBunny", n = 4, type = "discrete", override.order = FALSE)
 ```
 
 <img src="man/figures/README-OverrideOrder-1.png" height="300px" />
 
 ``` r
+
 WB_brewer("TheRunawayBunny", n = 6, type = "discrete", direction = -1, override.order = TRUE)
 ```
 
@@ -162,6 +180,7 @@ that still works, and still gives a little more intuitive(to me at
 least…) or specific control over the final product.
 
 ``` r
+
 WB_subset_brewer(name = "JulienIsAMermaid", n = 5, LCR = "left", type = "continuous", n2 = 200)
 ```
 
@@ -174,6 +193,7 @@ argument. The vector you provide can also shuffle around the order of
 the colors to best suit your preferences.
 
 ``` r
+
 WB_subset_brewer(name = "WhereTheWildThingsAre", type = "discrete", LCR = c(1,6,4,5))
 ```
 
@@ -185,6 +205,7 @@ Some convenience functions to make integration of palettes into ggplot2
 easier.
 
 ``` r
+
 library(ggplot2)
 
 ggplot(mtcars, aes(x = disp, y = wt, color = factor(cyl)))+
@@ -196,6 +217,7 @@ ggplot(mtcars, aes(x = disp, y = wt, color = factor(cyl)))+
 ![](man/figures/README-ggplotWrappers-1.png)<!-- -->
 
 ``` r
+
 ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
      geom_point(size=5, shape = 21)+
      scale_fill_WB_c(name = "ThisMooseBelongsToMe", direction = -1)+
@@ -205,6 +227,7 @@ ggplot(mtcars, aes(x = disp,y = wt, fill= mpg))+
 ![](man/figures/README-ggplotWrappers-2.png)<!-- -->
 
 ``` r
+
 
 ggplot(diamonds, aes(x = price, fill = color))+
   geom_density(position="stack", color = "white")+
@@ -218,6 +241,7 @@ Can also simply utilize `WB_brewer()` within the normal ggplot2 scale
 functions.
 
 ``` r
+
 library(usmap)
 library(magrittr)
 library(dplyr)
@@ -239,6 +263,7 @@ plot_usmap(data = statepop2,
 ![](man/figures/README-ggplot-1.png)<!-- -->
 
 ``` r
+
 ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
   stat_density_2d(aes(fill = ..level..), geom = "polygon", colour="white")+
   scale_fill_WB_c("TinyPerfectThings",direction = -1)+

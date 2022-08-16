@@ -1,5 +1,9 @@
 # *News*
 
+# WrensBookshelf 0.1.0 (2022-08-15)
+
+* Published to **CRAN**
+
 # WrensBookshelf 0.1.0 (2022-08-12)
 
 ## Resubmission
