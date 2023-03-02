@@ -48,6 +48,7 @@ function
 
 ``` r
 library(WrensBookshelf)
+
 ShowBookshelf()
 ```
 
@@ -56,26 +57,31 @@ ShowBookshelf()
 ``` r
 
 names(WrensBookshelf)
-#>  [1] "BabyBeluga"                   "BabyWrenAndTheGreatGift"     
-#>  [3] "BatheTheCat"                  "BlueberriesForSal"           
-#>  [5] "BoTheBrave"                   "BoTheBraveCVDS"              
-#>  [7] "BurtDow"                      "BurtDowCVDS"                 
-#>  [9] "CapsForSale"                  "GustavoTheShyGhost1"         
-#> [11] "GustavoTheShyGhost2"          "HaroldAndThePurpleCrayon"    
-#> [13] "JeffGoesWild"                 "JulienIsAMermaid"            
-#> [15] "LastStopOnMarketStreet"       "LittleBlueHouseBesideTheSea1"
-#> [17] "LittleBlueHouseBesideTheSea2" "Madelline"                   
-#> [19] "MakeWayForDucklings"          "Moongame"                    
-#> [21] "MoreThanALittle"              "OhThePlacesYoullGo"          
-#> [23] "Opposites"                    "StackTheCats"                
-#> [25] "TheDucklingGetsACookie"       "TheHoneybee1"                
-#> [27] "TheHoneybee2"                 "ThePoutPoutFish"             
-#> [29] "TheRunawayBunny"              "TheSnowyDay"                 
-#> [31] "TheStoryOfBabar"              "TheseWordsIShapedForYou"     
-#> [33] "ThisMooseBelongsToMe"         "ThreeLittleVikings"          
-#> [35] "TigerDays"                    "TinyPerfectThings"           
-#> [37] "Vampenguin"                   "WhatWellBuild"               
-#> [39] "WhereTheWildThingsAre"        "YouMatter"
+#>  [1] "BabyBeluga"                         "BabyWrenAndTheGreatGift"           
+#>  [3] "BatheTheCat"                        "BlueberriesForSal"                 
+#>  [5] "BoTheBrave"                         "BoTheBraveCVDS"                    
+#>  [7] "BurtDow"                            "BurtDowCVDS"                       
+#>  [9] "CapsForSale"                        "FletcherAndTheFallingLeaves"       
+#> [11] "Friends"                            "GoodnightGoodnightConstructionSite"
+#> [13] "GustavoTheShyGhost1"                "GustavoTheShyGhost2"               
+#> [15] "HaroldAndThePurpleCrayon"           "JeffGoesWild"                      
+#> [17] "JulienIsAMermaid"                   "KnightOwl"                         
+#> [19] "LastStopOnMarketStreet"             "LittleBlueHouseBesideTheSea1"      
+#> [21] "LittleBlueHouseBesideTheSea2"       "Madelline"                         
+#> [23] "MakeWayForDucklings"                "Moongame"                          
+#> [25] "MoreThanALittle"                    "OhThePlacesYoullGo"                
+#> [27] "Opposites"                          "SleepTightFarm1"                   
+#> [29] "SleepTightFarm2"                    "StackTheCats"                      
+#> [31] "TheDucklingGetsACookie"             "TheHoneybee1"                      
+#> [33] "TheHoneybee2"                       "ThePoutPoutFish"                   
+#> [35] "TheRealBoat1"                       "TheRealBoat2"                      
+#> [37] "TheRunawayBunny"                    "TheSnowyDay"                       
+#> [39] "TheStoryOfBabar"                    "TheseWordsIShapedForYou"           
+#> [41] "ThisMooseBelongsToMe"               "ThreeLittleVikings"                
+#> [43] "TigerDays"                          "TinyPerfectThings"                 
+#> [45] "TooCrowded"                         "Vampenguin"                        
+#> [47] "WeAreFamily"                        "WhatWellBuild"                     
+#> [49] "WhereTheWildThingsAre"              "YouMatter"
 ```
 
 ### Color Vision Deficiency (CVD) safe palettes
@@ -275,6 +281,92 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
 ## The Bookshelf
 
 ![](man/images/BookShelf.png)
+
+## Ten New Palettes!
+
+``` r
+
+WB_brewer("FletcherAndTheFallingLeaves")
+```
+
+<img src="man/figures/README-NewPals2023-1.png" height="300px" />
+
+``` r
+
+WB_brewer("WeAreFamily")
+```
+
+<img src="man/figures/README-NewPals2023-2.png" height="300px" />
+
+``` r
+
+WB_brewer("GoodnightGoodnightConstructionSite")
+```
+
+<img src="man/figures/README-NewPals2023-3.png" height="300px" />
+
+``` r
+
+WB_brewer("KnightOwl")
+```
+
+<img src="man/figures/README-NewPals2023-4.png" height="300px" />
+
+``` r
+
+WB_brewer("Friends")
+```
+
+<img src="man/figures/README-NewPals2023-5.png" height="300px" />
+
+``` r
+
+WB_brewer("TheRealBoat1")
+```
+
+<img src="man/figures/README-NewPals2023-6.png" height="300px" />
+
+``` r
+
+WB_brewer("TheRealBoat2")
+```
+
+<img src="man/figures/README-NewPals2023-7.png" height="300px" />
+
+``` r
+
+WB_brewer("SleepTightFarm1")
+```
+
+<img src="man/figures/README-NewPals2023-8.png" height="300px" />
+
+``` r
+
+WB_brewer("SleepTightFarm2")
+```
+
+<img src="man/figures/README-NewPals2023-9.png" height="300px" />
+
+``` r
+
+WB_brewer("TooCrowded")
+```
+
+<img src="man/figures/README-NewPals2023-10.png" height="300px" />
+
+``` r
+
+seq(-10, 10, by = 0.05) %>%
+  expand.grid(x=., y=.) %>%
+  ggplot(aes(x=(x+pi*cos(y)), y=(y+pi*sin(x)), color = x)) +
+  scale_color_WB_c("TheRealBoat2")+
+  geom_point(alpha=.25, shape=14, size=0)+
+  theme_void()+
+  theme(legend.position='none')+
+  coord_fixed()
+```
+
+![](man/figures/README-GenArtExample-1.png)<!-- -->
 
 ## Contact
 

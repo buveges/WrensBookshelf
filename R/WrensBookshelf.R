@@ -5,14 +5,16 @@
 #'
 #' Use names(WrensBookshelf) to display all possible palette names. Current available palettes:
 #' \code{BabyBeluga}, \code{BabyWrenAndTheGreatGift}, \code{BlueberriesForSal}, \code{BoTheBrave},
-#' \code{BoTheBraveCVDS}, \code{BurtDow}, \code{BurtDowCVDS}, \code{CapsForSale}, \code{GustavoTheShyGhostCover},
-#' \code{GustavoTheShyGhostGraveyard}, \code{HaroldAndThePurpleCrayon}, \code{JeffGoesWild},
-#' \code{JulienIsAMermaid}, \code{LittleBlueHouseBesideTheSeaCont}, \code{LittleBlueHouseBesideTheSeaDisc},
+#' \code{BoTheBraveCVDS}, \code{BurtDow}, \code{BurtDowCVDS}, \code{CapsForSale},\code{FletcherAndTheFallingLeaves},
+#' \code{Friends}, \code{GoodnightGoodnightConstructionSite}, \code{GustavoTheShyGhost1},
+#' \code{GustavoTheShyGhost2}, \code{HaroldAndThePurpleCrayon}, \code{JeffGoesWild}, \code{JulienIsAMermaid},
+#' \code{KnightOwl}, \code{LittleBlueHouseBesideTheSeaCont}, \code{LittleBlueHouseBesideTheSeaDisc},
 #' \code{Madelline}, \code{MakeWayForDucklings}, \code{MoreThanALittle}, \code{OhThePlacesYoullGo},
-#' \code{Opposites}, \code{StackTheCats}, \code{TheDucklingGetsACookie}, \code{TheHoneybee},
-#' \code{TheHoneybeeDiverging}, \code{ThePoutPoutFish}, \code{TheSnowyDay}, \code{TheStoryOfBabar},
+#' \code{Opposites}, \code{SleepTightFarm1}, \code{SleepTightFarm2}, \code{StackTheCats},
+#' \code{TheDucklingGetsACookie}, \code{TheHoneybee}, \code{TheHoneybeeDiverging}, \code{ThePoutPoutFish},
+#' \code{TheRealBoat1}, \code{TheRealBoat2}, \code{TheSnowyDay}, \code{TheStoryOfBabar},
 #' \code{TheseWordsIShapedForYou}, \code{ThisMooseBelongsToMe}, \code{ThreeLittleVikings}, \code{TigerDays},
-#' \code{TinyPerfectThings}, \code{Vampenguin}, \code{WhatWellBuild}, \code{WhereTheWildThingsAre}, and \code{YouMatter}.
+#' \code{TinyPerfectThings}, \code{TooCrowded}, \code{Vampenguin}, \code{WhatWellBuild}, \code{WhereTheWildThingsAre}, and \code{YouMatter}.
 #'
 #' @return No return value, sets a list of palettes to be used with WrensBookshelf functions
 #' @export
@@ -251,6 +253,66 @@ WrensBookshelf <- list(
                                       CVDsafe = TRUE,
                                       BestFor = "continuous",
                                       Author = "Matt De La Pena and Christian Robinson (Ills.)"
+  ),
+  FletcherAndTheFallingLeaves = list(c("#801a17","#d05127","#fcb85e","#e5e198","#9cced3","#8eb5b7","#79999e"),
+                                           c(1,6,3,7,2,5,4),
+                                CVDsafe = TRUE,
+                                BestFor = "continuous",
+                                Author = "Julia Rawlins and Tiphanie Beeke (Ills.)"
+  ),
+  WeAreFamily = list(c("#7a6faa","#a0b757","#00a7ad","#d96957","#dfd638","#f16785"),
+                                     c(1,2,3,4,5,6),
+                                     CVDsafe = TRUE,
+                                     BestFor = "discrete",
+                                     Author = "Patricia Hegarty and Ryan Wheatcroft (Ills.)"
+  ),
+  GoodnightGoodnightConstructionSite = list(c("#2b4168","#376499","#8eaecc","#ecf7fa","#dee28d","#f7d11d","#d1b339"),
+                     c(2,6,1,7,3,5,4),
+                     CVDsafe = TRUE,
+                     BestFor = "continuous",
+                     Author = "Sherri Duskey Rinker and Tom Lichtenheld (Ills.)"
+  ),
+  KnightOwl = list(c("#2f2f2f","#5b594f","#958c68","#dec87b","#b1983e","#b76028","#944821"),
+                                            c(1,7,2,6,3,5,4),
+                                            CVDsafe = TRUE,
+                                            BestFor = "continuous",
+                                            Author = "Christopher Denise"
+  ),
+  Friends = list(c("#f37121","#f8b1b0","#fdc998","#51bdd1","#78c8a4","#3a9645"),
+                   c(1,4,2,5,3,6),
+                   CVDsafe = FALSE,
+                   BestFor = "discrete",
+                   Author = "Daniela Sosa"
+  ),
+  TheRealBoat1 = list(c("#101d43","#396e94","#f4e4d3","#dc1c4c","#6a182a"),
+                 c(1,4,2,5,3),
+                 CVDsafe = TRUE,
+                 BestFor = "discrete",
+                 Author = "Marina Aromshtam and Victoria Semykina (Ills.)"
+  ),
+  TheRealBoat2 = list(c("#07172f","#242c60","#467cbf","#a8d8e4","#b0dcc4","#faeeba","#fde9ea","#f1c2da"),
+                      c(1,6,2,7,3,8,4,5),
+                      CVDsafe = FALSE,
+                      BestFor = "continuous",
+                      Author = "Marina Aromshtam and Victoria Semykina (Ills.)"
+  ),
+  SleepTightFarm1 = list(c("#43445d","#5a5981","#65749a","#a2b584","#909f5c","#839462"),
+                      c(1,6,2,7,3,8,4,5),
+                      CVDsafe = TRUE,
+                      BestFor = "continuous",
+                      Author = "Eugenie Doyle and Becca Stadtlander (Ills.)"
+  ),
+  SleepTightFarm2 = list(c("#4c4661","#7b89ba","#869c63","#cdb760","#786749","#a24830"),
+                         c(1,4,2,6,3,5),
+                         CVDsafe = FALSE,
+                         BestFor = "continuous",
+                         Author = "Eugenie Doyle and Becca Stadtlander (Ills.)"
+  ),
+  TooCrowded = list(c("#ed1c24","#f89a1c","#bee4e3","#1a64a3"),
+                         c(1,3,2,4),
+                         CVDsafe = TRUE,
+                         BestFor = "discrete",
+                         Author = "Lena Podesta"
   )
 )
 

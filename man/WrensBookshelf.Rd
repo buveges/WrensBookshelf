@@ -5,7 +5,7 @@
 \alias{WrensBookshelf}
 \title{Complete list of palettes.}
 \format{
-An object of class \code{list} of length 40.
+An object of class \code{list} of length 50.
 }
 \usage{
 WrensBookshelf
@@ -16,13 +16,15 @@ No return value, sets a list of palettes to be used with WrensBookshelf function
 \description{
 Use names(WrensBookshelf) to display all possible palette names. Current available palettes:
 \code{BabyBeluga}, \code{BabyWrenAndTheGreatGift}, \code{BlueberriesForSal}, \code{BoTheBrave},
-\code{BoTheBraveCVDS}, \code{BurtDow}, \code{BurtDowCVDS}, \code{CapsForSale}, \code{GustavoTheShyGhostCover},
-\code{GustavoTheShyGhostGraveyard}, \code{HaroldAndThePurpleCrayon}, \code{JeffGoesWild},
-\code{JulienIsAMermaid}, \code{LittleBlueHouseBesideTheSeaCont}, \code{LittleBlueHouseBesideTheSeaDisc},
+\code{BoTheBraveCVDS}, \code{BurtDow}, \code{BurtDowCVDS}, \code{CapsForSale},\code{FletcherAndTheFallingLeaves},
+\code{Friends}, \code{GoodnightGoodnightConstructionSite}, \code{GustavoTheShyGhost1},
+\code{GustavoTheShyGhost2}, \code{HaroldAndThePurpleCrayon}, \code{JeffGoesWild}, \code{JulienIsAMermaid},
+\code{KnightOwl}, \code{LittleBlueHouseBesideTheSeaCont}, \code{LittleBlueHouseBesideTheSeaDisc},
 \code{Madelline}, \code{MakeWayForDucklings}, \code{MoreThanALittle}, \code{OhThePlacesYoullGo},
-\code{Opposites}, \code{StackTheCats}, \code{TheDucklingGetsACookie}, \code{TheHoneybee},
-\code{TheHoneybeeDiverging}, \code{ThePoutPoutFish}, \code{TheSnowyDay}, \code{TheStoryOfBabar},
+\code{Opposites}, \code{SleepTightFarm1}, \code{SleepTightFarm2}, \code{StackTheCats},
+\code{TheDucklingGetsACookie}, \code{TheHoneybee}, \code{TheHoneybeeDiverging}, \code{ThePoutPoutFish},
+\code{TheRealBoat1}, \code{TheRealBoat2}, \code{TheSnowyDay}, \code{TheStoryOfBabar},
 \code{TheseWordsIShapedForYou}, \code{ThisMooseBelongsToMe}, \code{ThreeLittleVikings}, \code{TigerDays},
-\code{TinyPerfectThings}, \code{Vampenguin}, \code{WhatWellBuild}, \code{WhereTheWildThingsAre}, and \code{YouMatter}.
+\code{TinyPerfectThings}, \code{TooCrowded}, \code{Vampenguin}, \code{WhatWellBuild}, \code{WhereTheWildThingsAre}, and \code{YouMatter}.
 }
 \keyword{datasets}

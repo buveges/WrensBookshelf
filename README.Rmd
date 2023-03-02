@@ -51,6 +51,7 @@ Can view all palettes from Wren's bookshelf using the  `ShowBookshelf()` functio
 
 ```{r AllPalettes}
 library(WrensBookshelf)
+
 ShowBookshelf()
 
 names(WrensBookshelf)
@@ -187,6 +188,45 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)),aes(x=x,y=y))+
 ## The Bookshelf
 
 ![](man/images/BookShelf.png)
+
+## Ten New Palettes!
+
+```{r NewPals2023, out.height="300px"}
+
+WB_brewer("FletcherAndTheFallingLeaves")
+
+WB_brewer("WeAreFamily")
+
+WB_brewer("GoodnightGoodnightConstructionSite")
+
+WB_brewer("KnightOwl")
+
+WB_brewer("Friends")
+
+WB_brewer("TheRealBoat1")
+
+WB_brewer("TheRealBoat2")
+
+WB_brewer("SleepTightFarm1")
+
+WB_brewer("SleepTightFarm2")
+
+WB_brewer("TooCrowded")
+
+```
+
+```{r GenArtExample}
+
+seq(-10, 10, by = 0.05) %>%
+  expand.grid(x=., y=.) %>%
+  ggplot(aes(x=(x+pi*cos(y)), y=(y+pi*sin(x)), color = x)) +
+  scale_color_WB_c("TheRealBoat2")+
+  geom_point(alpha=.25, shape=14, size=0)+
+  theme_void()+
+  theme(legend.position='none')+
+  coord_fixed()
+
+```
 
 ## Contact
 
