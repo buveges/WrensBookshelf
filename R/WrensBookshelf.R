@@ -297,7 +297,7 @@ WrensBookshelf <- list(
                       Author = "Marina Aromshtam and Victoria Semykina (Ills.)"
   ),
   SleepTightFarm1 = list(c("#43445d","#5a5981","#65749a","#a2b584","#909f5c","#839462"),
-                      c(1,6,2,7,3,8,4,5),
+                      c(1,4,2,5,3,6),
                       CVDsafe = TRUE,
                       BestFor = "continuous",
                       Author = "Eugenie Doyle and Becca Stadtlander (Ills.)"
