@@ -1,8 +1,10 @@
 # *News*
 
-# WrensBookshelf 0.1.0 (2023-03-2)
+# WrensBookshelf 0.2.0 (2023-05-23)
 
-* Ten new palettes have been added to the developement version
+* **CRAN** Submitted version 0.2.0 to CRAN
+* Ten new palettes have been added to WrensBookshelf
+* Updated ShowBookshelf() function to accomodate additional palettes
 
 # WrensBookshelf 0.1.0 (2022-08-15)
 

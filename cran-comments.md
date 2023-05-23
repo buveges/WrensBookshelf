@@ -1,6 +1,13 @@
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs in local check.
 
+## Minor release (v 0.2.0) submission (May 23, 2023)
+
+* Ten new palettes have been added WrensBookshelf
+
+* Updated ShowBookshelf() function to accomodate additional palettes
+
+## OLDER NOTES
 ## Resubmission (August 12, 2022)
 This is a resubmission, in this version I have fixed the following issues:
 
@@ -19,8 +26,6 @@ This is a resubmission, in this version I have fixed the following issues:
 * Changed how the return to users original par was handled in ShowBookshelf() function to be more in line with the requested format (eg. get oldpar, then on.exit(par(oldpar)) on the next line).
 
 
-
-## OLDER NOTES
 ## Fixes
 * Added image files used for Github README.md to .Rbuildignore, file size shoould now be below 5MB
 
