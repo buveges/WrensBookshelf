@@ -49,6 +49,6 @@ ShowBookshelf <- function(CVDsafe = FALSE, BestFor = NA) {
     title(sub = paste(pal[["Author"]]), adj=1, line = 0, cex.sub = 0.5)
   }
   par(mfrow = c(ceiling(length(WrensBookshelfTemp)/4),4),
-      mai = c(0.1,0.1,0.1,0.1))
+      mai = c(0.2,0.1,0.1,0.1))
   invisible(mapply(FUN = WB.bar, names(WrensBookshelfTemp)))
 }
